@@ -1,0 +1,57 @@
+body {
+    background-color : #282c35;
+    color: #e6e6e6;
+}
+
+h1 {
+    color: #e45d71;
+    padding: 15px;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #e45d71;
+    font-weight: 600;
+}
+
+li {
+    margin: 3px;
+}
+
+.img-container {
+    text-align: center;
+    margin: 30px;
+}
+
+img {
+    max-width: 70%;
+}
+
+a:link {
+  color: #e83e8c;
+}
+
+/* visited link */
+a:visited {
+  color: lightblue;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+#main-word {
+    font-weight: 700;
+    color: yellow;
+}
+
+#address {
+    width: 30%;
+    margin : 30px auto;
+    background-color : #fff;
+    color: #000;
+}

@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1 class="mb-3">Form</h1>
+
+
+    <form action="/form" method="post" class="needs-validation" novalidate>
+
+          <div class="row">
+
+            <div class="col-md mb-3">
+              <label for="validationCustom01">Name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Name" name="name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div class="col-md mb-3">
+                <label for="house">House</label>
+                <select name="house" id="house" class="custom-select form-control" required>
+                    <option disabled selected value="">House</option>
+                    <option value="gryffindor">Gryffindor</option>
+                    <option value="hufflepuff">Hufflepuff</option>
+                    <option value="ravenclaw">Ravenclaw</option>
+                    <option value="slytherin">Slytherin</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please choose a house.
+                </div>
+            </div>
+
+             <div class="col-md mb-3">
+                    <div class="input-group">
+                        <input class="form-check-input" type="radio" name="position" required id="beater" value="beater">
+                        <label class="form-check-label" for="beater">
+                            Beater
+                        </label>
+                    </div>
+
+                    <div class="input-group">
+                        <input class="form-check-input" type="radio" name="position" required id="chaser" value="chaser">
+                        <label class="form-check-label" for="chaser">
+                            Chaser
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <input class="form-check-input" type="radio" name="position" required id="keeper" value="keeper">
+                        <label class="form-check-label" for="keeper">
+                            Keeper
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <input class="form-check-input" type="radio" name="position" required id="seeker" value="seeker">
+                        <label class="form-check-label" for="seeker">
+                            Seeker
+                        </label>
+                    </div>
+
+                      <div class="invalid-feedback">
+                        Please provide a position.
+                      </div>
+            </div>
+
+
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+
+    <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+    </script>
+
+{% endblock %}

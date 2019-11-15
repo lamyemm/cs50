@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Lecture 5</title>
+    </head>
+    <body>
+
+<div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">CS50 - Lecture 5</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Networking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http.html">HTTP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html.html">HTML</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forms.html">Forms</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <h1>Networking</h1>
+
+        <ul>
+          <li>
+            Today we’ll transition from building command-line programs in C to web applications, and though we’ll see new languages, many ideas and concepts will stay the same.
+          </li>
+          <li>
+            TCP/IP (Transmission Control Protocol and Internet Protocol) are two <span id="main-word">protocols</span>, or rules that specify how computers can communicate with each other. The modern internet relies on these protocols to work.
+          </li>
+          <li>
+            We might have sent handwritten letters in the mail in the past. On the outside of the envelope, we need to write an address, including information like a name, street, and city. We also write our own name and address as the return address.
+          </li>
+          <li>
+            Each address, too, should uniquely identify a building or place.
+          </li>
+          <li>
+            Our computers also have addresses that uniquely identify them on the internet, called IP addresses. In IPv4, or version 4 of the protocol, these addresses are numbers in the format #.#.#.#, four numbers between 0 and 255 separated by dots. And to represent each number (with 256 possible values), we need exactly 8 bits, and so each IP address is made of 32 bits. But with 32 bits, we can only represent 4 billion values. And since there are more than 4 billion devices connected to the internet, we have a newer version of the protocol, IPv6, which has 128-bit addresses, that the world is starting to transition to.
+          </li>
+          <li>
+            A server, which is just a computer connected to the internet that can listen for and respond to messages, might provide many services, such as a web site or email. To specify that a message is intended for a particular service, such as web browsing, another number called the port number is added to the address. For example, HTTP, for browsing websites, is usually communicated with port 80. So an envelope with a message might have 1.2.3.4:80 as the destination address, and 5.6.7.8 as the return address. And there are other complexities, but that’s the basics of how computers can communicate over a network.
+          </li>
+          <li>
+            Let’s say we wanted to visit a URL, Uniform Resource Locator, like http://www.example.com/. It turns out that there’s another technology called DNS, Domain Name System, that many internet providers and organizations maintain, which converts domain names (like example.com) into IP addresses.
+          </li>
+          <li>
+           There are actually now hundreds of TLDs, top-level domains in addition to .com, such as .net, .org, .us, .uk, and more.
+          </li>
+          <li>
+            The www in front of a domain name is actually a subdomain, and there might be many of them created, each of which pointing to a different server or set of servers. It’s not required, and www is only used by convention. For example, MIT uses web.mit.edu for their main website’s address.
+          </li>
+          <li>
+            The / at the end implies that we’re asking for the root page of the site, which is conventionally index.html, where .html indicates that the file is written in HTML, a language we’ll soon look at.
+          </li>
+          <li>
+            When we type that URL in a browser, our browser first uses DNS to look up the IP address for that domain, and then sends a request (in a virtual envelope) to the right IP address for the website. And when the server at that address responds, it will send us the content of the website in a virtual envelope with our address as the destination.
+          </li>
+        </ul>
+
+        <hr>
+</div>
+    </body>
+</html>

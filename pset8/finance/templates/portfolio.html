@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1 class="mb-3">Portfolio</h1>
+    <div>
+        <h3>Name : {{ username }}</h3>
+        <h3>Cash : {{ cash }}</h3>
+    </div>
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price now</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in portfolio %}
+            <tr>
+                <td>{{ stock["symbol"] }}</td>
+                <td>{{ stock["shares"] }}</td>
+                <td>{{ stock["priceFormatted"] }}</td>
+                <td>{{ stock["totalForStockFormatted"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>TOTAL : {{ gross }}</h1>
+
+
+
+
+
+    <form action="/" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="addcash" placeholder="Add additional cash to your account" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Send cash</button>
+    </form>
+
+
+{% endblock %}
